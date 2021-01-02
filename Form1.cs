@@ -1,7 +1,4 @@
 ﻿using System;
-using System.Diagnostics;
-using System.Drawing;
-using System.Runtime.CompilerServices;
 using System.Windows.Forms;
 
 namespace GitHub_Badge_Generator
@@ -16,7 +13,7 @@ namespace GitHub_Badge_Generator
 		protected override void OnLoad(EventArgs e)
 		{
 			base.OnLoad(e);
-
+  
 			comboBox1.Items.AddRange(badgeColorNames);
 
 			comboBox1.SelectedIndexChanged += (sender_, e_) =>
@@ -65,7 +62,9 @@ namespace GitHub_Badge_Generator
 
 		private void button1_Click(object sender, EventArgs e)
 		{
-			badgeLink.Text = string.Format("![](https://img.shields.io/badge/{0}-{1}-{2})", labelText, messageText, badgeColor);
+			string url = "https://img.shields.io/badge/{0}-{1}-{2}";
+			badgeLink.Text = string.Format("![](" + url + ")", labelText, messageText, badgeColor);
+			badgeDisplay.Url = new Uri(string.Format(url, labelText, messageText, badgeColor));
 		}
 
 		private void badgeLink_Click(object sender, EventArgs e)
