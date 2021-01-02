@@ -29,10 +29,18 @@ namespace GitHub_Badge_Generator
 			label.TextChanged += (sender_, e_) =>
 			{
 				labelText = label.Text;
+				if (labelText.Contains("-")) labelText = labelText.Replace("-", "--");
+				if (labelText.Contains("_"))
+					if (checkBox1.Checked) labelText = labelText.Replace("_", "__");
+				labelText = labelText.Replace(' ', '_');
 			};
 			message.TextChanged += (sender_, e_) =>
 			{
 				messageText = message.Text;
+				if (messageText.Contains("-")) messageText = messageText.Replace("-", "--");
+				if (messageText.Contains("_"))
+					if (checkBox1.Checked) messageText = messageText.Replace("_", "__");
+				messageText = messageText.Replace(' ', '_');
 			};
 		}
 
@@ -62,6 +70,17 @@ namespace GitHub_Badge_Generator
 
 		private void button1_Click(object sender, EventArgs e)
 		{
+			labelText = label.Text;
+			if (labelText.Contains("-")) labelText = labelText.Replace("-", "--");
+			if (labelText.Contains("_"))
+				if (checkBox1.Checked) labelText = labelText.Replace("_", "__");
+			labelText = labelText.Replace(' ', '_');
+			messageText = message.Text;
+			if (messageText.Contains("-")) messageText = messageText.Replace("-", "--");
+			if (messageText.Contains("_"))
+				if (checkBox1.Checked) messageText = messageText.Replace("_", "__");
+			messageText = messageText.Replace(' ', '_');
+
 			string url = "https://img.shields.io/badge/{0}-{1}-{2}";
 			badgeLink.Text = string.Format("![](" + url + ")", labelText, messageText, badgeColor);
 			badgeDisplay.Url = new Uri(string.Format(url, labelText, messageText, badgeColor));
