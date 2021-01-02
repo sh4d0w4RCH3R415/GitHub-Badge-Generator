@@ -1,6 +1,6 @@
 [![](https://img.shields.io/badge/build-stable-brightgreen)](#)
 [![](https://img.shields.io/badge/latest-1.0.1-orange)](https://github.com/sh4d0w4RCH3R415/GitHub-Badge-Generator/releases/1.0.1/)
-[![](https://img.shields.io/badge/virus--detection-virus--free-brightgreen)](https://www.virustotal.com/gui/file/c327cef71249c3f9461af2f2da6bf2e5d804acb7d16dc0e365183e7ec6f323ff/detection)
+[![](https://img.shields.io/badge/VirusTotal-virus--free-brightgreen)](https://www.virustotal.com/gui/file/c327cef71249c3f9461af2f2da6bf2e5d804acb7d16dc0e365183e7ec6f323ff/detection)
 
 # GitHub Badge Generator
 ### DESCRIPTION
