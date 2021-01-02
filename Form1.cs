@@ -64,7 +64,7 @@ namespace GitHub_Badge_Generator
 			"informational",
 			"inactive",
 			"blueviolet",
-			"pink",
+			"hotpink",
 			"skyblue"
 		};
 
